@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Bienvenido a la Gestión de Equipos de Fútbol</h2>
+<p>Usa los enlaces de navegación para gestionar los equipos o tu cuenta.</p>
+<p><a href="{% url 'team_create' %}"><button>Agregar Equipo</button></a></p>
+{% endblock %}

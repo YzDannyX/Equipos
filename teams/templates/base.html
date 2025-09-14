@@ -1,0 +1,16 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fútbol</title>
+</head>
+<body>
+  {% if user.is_authenticated %}
+    <p>Hola, {{ user.username }} | <a href="{% url 'logout' %}">{% trans "Salir" %}</a></p>
+  {% else %}
+    <a href="{% url 'login' %}">{% trans "Entrar" %}</a> | <a href="{% url 'signup' %}">{% trans "Registrarse" %}</a>
+  {% endif %}
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
